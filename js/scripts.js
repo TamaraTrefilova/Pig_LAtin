@@ -1,6 +1,6 @@
 var string;
 var wordsArray =[];
-var vow = ["a","e","i", "o", "u"];
+var vow = ["a","e","i", "o", "u","A","O","E","U","I"];
 var temp;
 
 var addToEnd = function(word, characters){
@@ -18,7 +18,7 @@ var pigLatin = function(array){
        } else {
          var idx = 1;
          while((!vow.includes(temp.charAt(idx))&&idx<temp.length)){
-           if(temp.charAt(idx) == 'q' && temp.charAt(idx+1) == 'u' ){
+           if((temp.charAt(idx) == 'q'||temp.charAt(idx) == 'Q' ) && (temp.charAt(idx+1) == 'u'||temp.charAt(idx+1) == 'U') ){
               idx+=2;
               break;
            }
